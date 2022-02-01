@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-InputOutput';
+
+  animalArray:Animal[] = [
+    {name:'chicken', type:'friedMeat', age:15},
+    {name:'pig', type:'sausageMeat', age:20}
+];
 }
 
 
@@ -22,3 +27,4 @@ export class Animal{
         this.age = age;
     }
 }
+

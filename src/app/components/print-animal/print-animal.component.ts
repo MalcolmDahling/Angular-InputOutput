@@ -9,13 +9,13 @@ import { Animal } from '../../app.component';
 export class PrintAnimalComponent implements OnInit {
 
     constructor() { 
-
+        
     }
 
     ngOnInit(): void {
     }
 
 
-    @Input() animal:Animal;
+    @Input() animal:Animal = new Animal('cow', 'burgermeat', 12);
 
 }
