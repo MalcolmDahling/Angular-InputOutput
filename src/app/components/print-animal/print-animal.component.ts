@@ -14,7 +14,7 @@ export class PrintAnimalComponent implements OnInit {
 
 
 
-    @Input() animal:Animal = new Animal('cow', 'burgermeat', 12, false);
+    @Input() animal:Animal = new Animal('', '', 0, false);
 
     @Output() fed = new EventEmitter<Animal>();
 

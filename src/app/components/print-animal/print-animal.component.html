@@ -1,1 +1,9 @@
-<p>{{animal.name + " " + animal.type + " " + animal.age + " " + animal.isFed}} <input type="button" value="Feed" (click)="feedAnimal()"></p>
+<p>
+    {{
+        "Name: "    + animal.name +
+        " Type: "   + animal.type +
+        " Age: "    + animal.age +
+        " Is fed: " + animal.isFed
+    }}
+    <input type="button" value="Feed" (click)="feedAnimal()">
+</p>

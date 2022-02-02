@@ -14,9 +14,14 @@ export class AppComponent {
         {name:'horse', type:'gorbysMeat', age:2, isFed:false}
     ];
 
-    feedAnimal2(){
-        
+    animalsFed:number = 0;
+
+    feedAnimal(animal:Animal){
+        console.log(animal)
+        animal.isFed = true;
+        this.animalsFed++;
     }
+
 }
 
 
