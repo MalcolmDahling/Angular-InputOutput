@@ -24,10 +24,12 @@ export class AppComponent {
     }
 
 
-    constructor(public animalService:AnimalService){}
+    animalArray:Animal[] = [];
+
+    constructor(private animalService:AnimalService){}
 
     ngOnInit(){
-        this.animalService.getAnimals();
+        this.animalArray = this.animalService.getAnimals();
     }
 
 }
