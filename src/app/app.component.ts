@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnimalService } from './services/animal.service';
 
 @Component({
     selector: 'app-root',
@@ -8,11 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'Angular-InputOutput';
 
-    animalArray:Animal[] = [
-        {name:'chicken', type:'friedMeat', age:15, isFed:false},
-        {name:'pig', type:'sausageMeat', age:20, isFed:false},
-        {name:'horse', type:'gorbysMeat', age:2, isFed:false}
-    ];
+    // animalArray:Animal[] = [
+    //     {name:'chicken', type:'friedMeat', age:15, isFed:false},
+    //     {name:'pig', type:'baconMeat', age:20, isFed:false},
+    //     {name:'horse', type:'gorbysMeat', age:2, isFed:false}
+    // ];
 
     animalsFed:number = 0;
 
@@ -20,6 +21,13 @@ export class AppComponent {
         console.log(animal)
         animal.isFed = true;
         this.animalsFed++;
+    }
+
+
+    constructor(public animalService:AnimalService){}
+
+    ngOnInit(){
+        this.animalService.getAnimals();
     }
 
 }

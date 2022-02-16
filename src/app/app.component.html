@@ -1,3 +1,3 @@
 <h1>Animals fed: {{animalsFed}}</h1>
 
-<app-print-animal *ngFor="let animal of animalArray" [animal]="animal" (fed)="feedAnimal(animal)"></app-print-animal>
+<app-print-animal *ngFor="let animal of animalService.animalArray" [animal]="animal" (fed)="feedAnimal(animal)"></app-print-animal>
